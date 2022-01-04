@@ -254,7 +254,7 @@ canvas{
 }
 
 .excelence-title{
-  color: #5188dc;
+  color: #3e6fba;
   font-size: 21px;
   margin-bottom: 10px;
   padding-bottom: 5px;
@@ -293,7 +293,7 @@ canvas{
 
 .languages-content table td i.bi{
   margin-left: 2px;
-  color: #5188dc;
+  color: #3e6fba;
 }
 
 /* 
@@ -351,7 +351,7 @@ canvas{
   }
   
   #features .box-item .icon i {
-    color: #5188dc;
+    color: #3e6fba;
     font-size: 30px;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
@@ -414,7 +414,7 @@ canvas{
 
 ::-webkit-scrollbar-thumb
 {
-  background-color: #5b69e4;
+  background-color: #3e6fba;
   border: 1px solid #302eb8;
   border-radius: 0px;
 }
