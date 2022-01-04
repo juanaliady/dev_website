@@ -1,0 +1,421 @@
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-color: #131313;
+    background-size: cover;
+    position: relative;
+}
+
+#hero canvas{
+  padding: 60px 0px;
+}
+
+section{
+  background-color: #f9f9f9;
+}
+
+
+h4{
+  margin-bottom: 15px;
+}
+
+/* 
+  =============================================================
+    ******************       HOME     *************************
+   ============================================================
+*/
+
+.decoration-text{
+    position: absolute;
+    font-family: monospace;
+    word-spacing: -2px;
+    /* display: none; */
+}
+
+#python-text{
+    font-size: 20px;
+    top: 100px;
+    right: 42%;
+    display: none;
+}
+
+#sql-text{
+    font-size: 18px;
+    top: 150px;
+    right: 15%;
+}
+
+#sass-text{
+    font-size: 18px;
+    top: 150px;
+    left: 12%;
+}
+
+#html-text{
+    font-size: 18px;
+    top: 290px;
+    left: 6%;
+}
+
+#go-text{
+    font-size: 18px;
+    top: 490px;
+    left: 11%;
+}
+
+#php-text{
+    font-size: 18px;
+    top: 320px;
+    right: 6%;
+}
+
+#js-text{
+    font-size: 18px;
+    top: 490px;
+    right: 9%;
+}
+
+#c-sharp-text{
+    font-size: 17px;
+    top: 560px;
+    left: 40%;
+    display: none;
+}
+
+.floating-1 { 
+    animation-name: floating-1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+@keyframes floating-1 {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.floating-2 { 
+    animation-name: floating-2;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+@keyframes floating-2 {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 17px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.floating-3 { 
+    animation-name: floating-2;
+    animation-duration: 5.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+@keyframes floating-3 {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 13px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.floating-4 { 
+    animation-name: floating-2;
+    animation-duration: 4.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+@keyframes floating-4 {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 17px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.hero-title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 4.5rem;
+    }
+  }
+  
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #c9c9c9;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-subtitle {
+      font-size: 2.5rem;
+    }
+  }
+
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  } /* ---- stats.js ---- */
+  .count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13e8e9;
+    font-size: 0.8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+  .js-count-particles {
+    font-size: 1.1em;
+  }
+  #stats,
+  .count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  #stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+  }
+  .count-particles {
+    border-radius: 0 0 3px 3px;
+  }
+
+/* 
+  =============================================================
+    ******************       ABOUT     *************************
+   ============================================================
+*/
+.summary-skill-item div{
+  max-height: 24px;
+  margin-bottom: 7px;
+}
+.summary-skill-item .dot{
+  width: 7px;
+  height: 7px;
+  border-radius: 3px;
+  background-color: #ccc;
+  margin-top: calc(15px - 7px);
+  margin-right: 6px;
+  float: left;
+}
+.summary-skill-item .dot.active{
+  background-color: #1b77ce;
+}
+
+.wrapper, .wrapper2{
+  /* width:50%;
+  display:block;
+  overflow:hidden;
+  margin:0 auto;
+  padding: 60px 50px;
+  border-radius:4px; */
+  background: transparent;
+
+  
+}
+
+canvas{
+  background: transparent;
+  height:250px;
+}
+
+/* 
+  =============================================================
+    *****************      MY POWER     ***********************
+   ============================================================
+*/
+
+.excelence-item{
+  /* box-shadow: 0px 0px 2px 1px #777; */
+  border: 1px solid #e4e4e4;
+  padding: 5px 15px;
+  background-color: #fcfcfc;
+  margin: 10px 0px;
+}
+
+.excelence-title{
+  color: #5188dc;
+  font-size: 21px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #cee0fd;
+}
+
+.excelence-title i{
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.excelence-desc ul{
+  padding-left: 0px;;
+}
+.excelence-desc li{
+  list-style: none;
+}
+
+.excelence-icon, .excelence-text{
+  float: left;
+}
+
+.excelence-icon{
+  width: 5%;
+  padding-right: 0px;
+}
+
+.excelence-text{
+  width: 92%;
+}
+
+.languages-content table{
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.languages-content table td i.bi{
+  margin-left: 2px;
+  color: #5188dc;
+}
+
+/* 
+  =============================================================
+    *****************     MY SERVICE    ***********************
+  ============================================================= 
+*/
+   #features {
+    background: #f9f9f9;
+  }
+  
+  #features .icon {
+    display: inline-block;
+    width: 60px;
+    height: 70px;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #features .content-left span {
+    float: right;
+  }
+  
+  #features .content-left .text {
+    text-align: right;
+  }
+  
+  #features .content-right span {
+    float: left;
+  }
+  
+  #features .box-item {
+    box-shadow: 0 0 12px #F4F4F4;
+    padding: 15px;
+    line-height: 22px;
+    margin-top: 30px;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    -webkit-transition: all .3s ease-in-out;
+    -mox-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    position: relative;
+    top: 0;
+  }
+  
+  #features .box-item .icon {
+    text-align: center;
+    margin: 12px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  
+  #features .box-item .icon i {
+    color: #5188dc;
+    font-size: 30px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  
+  #features .box-item .text h4 {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  
+  #features .box-item .text p {
+    font-size: 14px;
+    line-height: 26px;
+    color: #abacae;
+    -webkit-font-smoothing: subpixel-antialiased;
+    margin: 0px;
+  }
+  
+  #features .box-item:hover {
+    box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+  }
+  
+  #features .box-item:hover h4 {
+    color: #5188dc;
+  }
+  
+  #features .show-box {
+    margin-top: 50px;
+  }
+  
+  #features .show-box img {
+    width: 100%;
+  }
+
+/* 
+  =============================================================
+    ******************       SCROLL    *************************
+   ============================================================= 
+*/
+
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #3f3f3f;
+}
+
+::-webkit-scrollbar
+{
+  width: 8px;
+  background-color: #3f3f3f;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: #5b69e4;
+  border: 1px solid #302eb8;
+  border-radius: 0px;
+}
+  
