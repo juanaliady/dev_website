@@ -289,7 +289,7 @@ $(document).ready(function () {
       data: {
           labels: [ "Web", "Mobile", "Desktop"],
           datasets: [{
-              data: [60,20,20],
+              data: [60,30,10],
               backgroundColor: [
                   'rgba(23, 135, 186, 1)',
                   'rgba(43, 180, 212, 1)',

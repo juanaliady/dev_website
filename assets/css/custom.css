@@ -298,6 +298,49 @@ canvas{
 
 /* 
   =============================================================
+    *****************     MY RESUME    ***********************
+  ============================================================= 
+*/
+
+.spoiler-wrapper {
+  max-height: 1200px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+.spoiler-wrapper.expanded {
+  max-height: none;
+}
+
+.spoiler-toggle {
+  width: 100%;
+  font-size: 1.3em;
+  color: #007bff;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Optional fade gradient at bottom */
+.spoiler-fade {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+.spoiler-wrapper.expanded .spoiler-fade {
+  display: none;
+}
+
+/* 
+  =============================================================
     *****************     MY SERVICE    ***********************
   ============================================================= 
 */
@@ -393,6 +436,7 @@ canvas{
   #features .show-box img {
     width: 100%;
   }
+
 
 /* 
   =============================================================
