@@ -459,7 +459,10 @@ canvas{
 }
 
 @media (max-width: 991px) {
-  /* Make hero adapt to smaller heights (avoid content overflow) */
+  #header {
+    align-items: left!important;
+    justify-content: left!important;
+  }
 
 
   /* About image: lower min-height so it doesn't push content too far */
@@ -611,5 +614,56 @@ canvas{
 
 /* Ensure hero text wraps and does not overflow */
 .hero-title, .hero-subtitle { word-break: break-word; }
+
+/* 
+  =============================================================
+    *************     RESUME BUTTON    ***********************
+   ============================================================= 
+*/
+
+.navbar .resume-btn {
+  background: #5188dc;
+  color: #fff !important;
+  padding: 10px 18px !important;
+  border-radius: 4px;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-weight: 600;
+  border: 1px solid #5188dc;
+}
+
+.navbar .resume-btn:hover {
+  background: #ff785a;
+  color: #333 !important;
+  border-color: #f67e63;
+}
+
+/* Resume button on mobile */
+@media (max-width: 991px) {
+  .navbar .resume-btn {
+    background: #5188dc;
+    padding: 10px 20px !important;
+    margin: 15px;
+    display: block;
+    width: calc(100% - 40px);
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .navbar .resume-btn:hover {
+    background: #ffc85a;
+    color: #333 !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar .resume-btn {
+    padding: 10px 15px !important;
+    margin: 10px;
+    width: calc(100% - 30px);
+    font-size: 13px;
+  }
+}
 
   

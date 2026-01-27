@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -48,10 +48,10 @@
       <ul>
         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
         <li><a class="nav-link scrollto" href="#about">About</a></li>
-        <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
-        <li><a class="nav-link scrollto" href="#services">Services</a></li>
         <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+        <li><a class="nav-link scrollto" href="#services">Services</a></li>
         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li><a class="nav-link resume-btn" href="https://drive.google.com/file/d/1wjboLfCOeqeewyuBR0NO5kifHT0l2aMv/view?usp=drive_link" target="_blank">Resume</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -143,25 +143,23 @@
                 <div class="col-lg-6">
                   <ul>
                     <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Juan Ali Ady</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>  <a href="" > juanaliady.com </a>  </span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+62 857 7237 5061</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Gender:</strong> <span><span style="color: #5188dc; margin-right: 5px; font-size: 18px;">♂</span>Male</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+62 813-8771-312</span></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Bogor / Jakarta</span></li>
                   </ul>
                 </div>
                 <div class="col-lg-6">
                   <ul>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>25</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Nationality:</strong> <span>Indonesia</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="myAge"></span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Nationality:</strong> <span><span style="color: #5188dc; margin-right: 8px; font-size: 20px;">🇮🇩</span><span id="myGender">Indonesia</span></span></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>aliadyjuan02@gmail.com</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span>7+ years</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span id="myExperience">8+ years</span></li>
                   </ul>
                 </div>
               </div>
               <div class="col-lg-12 mt-4 mb-4">
-                <h4>Personal Profile</h4>
-                <p>Quick to learn and adapt to the environment, Communicate and have good ethics. 
-                   Work hard,have commitment and be able to work individually or teams.
-                   <br><br> I used to work with AI that boost my productivity to another level</p>
+                <h4>Summary Experience</h4>
+                <p>I help businesses turn ideas into reliable digital products. With experience delivering enterprise systems, AI-enabled applications, and automation solutions, I work across strategy, development, and deployment to build scalable technology that solves real operational problems. I collaborate closely with teams and clients to ensure solutions are practical, secure, and ready to grow.</p>
                 
               </div>
               <div class="row">
@@ -193,10 +191,23 @@
                         <div class="dot"></div>
                       </div>
                     </div>
-  
+
                     <div class="row summary-skill-item">
                       <div class="col-lg-7">
                         Business Analyst Flow
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="dot active"></div>
+                        <div class="dot active"></div>
+                        <div class="dot active"></div>
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                      </div>
+                    </div>
+
+                    <div class="row summary-skill-item">
+                      <div class="col-lg-7">
+                        Dev Ops
                       </div>
                       <div class="col-lg-5">
                         <div class="dot active"></div>
@@ -209,7 +220,7 @@
 
                     <div class="row summary-skill-item">
                       <div class="col-lg-7">
-                        Trainer
+                        IT Trainer
                       </div>
                       <div class="col-lg-5">
                         <div class="dot active"></div>
@@ -222,12 +233,12 @@
   
                     <div class="row summary-skill-item">
                       <div class="col-lg-7">
-                        Staff and User Training
+                        QA Testing
                       </div>
                       <div class="col-lg-5">
                         <div class="dot active"></div>
                         <div class="dot active"></div>
-                        <div class="dot active"></div>
+                        <div class="dot"></div>
                         <div class="dot"></div>
                         <div class="dot"></div>
                       </div>
@@ -236,19 +247,6 @@
                     <div class="row summary-skill-item">
                       <div class="col-lg-7">
                         UI/UX
-                      </div>
-                      <div class="col-lg-5">
-                        <div class="dot active"></div>
-                        <div class="dot active"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                      </div>
-                    </div>
-  
-                    <div class="row summary-skill-item">
-                      <div class="col-lg-7">
-                        Design Graphic
                       </div>
                       <div class="col-lg-5">
                         <div class="dot active"></div>
@@ -272,6 +270,205 @@
 
       </div>
     </section><!-- End About Me Section -->
+
+    <!-- ======= My Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <span>My Portfolio</span>
+          <h2>My Portfolio</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">App</li>
+          <li data-filter=".filter-card">Card</li>
+          <li data-filter=".filter-web">Web</li>
+        </ul>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End My Portfolio Section -->
+
+    <section id="services" class="section-padding">
+      <div class="container">
+        <div class="section-title">
+          <span>My Services</span>
+          <h2>My Services</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+            <div class="content-left">
+              <div class="box-item wow fadeInLeft animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+                <span class="icon">
+                  <i class="lni-laptop-phone"></i>
+
+                </span>
+                <div class="text">
+                  <h4>Web Enterprise</h4>
+                  <p>A web application for your internal company to support your bussiness like Accounting, HR, Warehouse,etc.</p>
+                </div>
+              </div>
+              <div class="box-item wow fadeInLeft animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
+                <span class="icon">
+                  <i class="lni-layout"></i>
+
+
+                </span>
+                <div class="text">
+                  <h4>Web Design</h4>
+                  <p>A simple web for your company, personal or portofolio profile with intuitive design</p>
+                </div>
+              </div>
+              <div class="box-item wow fadeInLeft animated" data-wow-delay="0.9s" style="visibility: visible;-webkit-animation-delay: 0.9s; -moz-animation-delay: 0.9s; animation-delay: 0.9s;">
+                <span class="icon">
+                  <i class="lni-mobile"></i>
+                </span>
+                <div class="text">
+                  <h4>Mobile App</h4>
+                  <p>A mobile app for public or private use based on IOS or Android everything to make easy your job</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+            <div class="show-box wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+              <img src="assets/img/service/intro-mobile.png" class="img-fluid" alt ="img_preview">
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+            <div class="content-right">
+              <div class="box-item wow fadeInRight animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+                <span class="icon">
+                  <i class="lni-users"></i>
+                </span>
+                <div class="text">
+                  <h4>Freelance Programmer</h4>
+                  <p>I could work as freelance to you for just time period or by project progress</p>
+                </div>
+              </div>
+              <div class="box-item wow fadeInRight animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
+                <span class="icon">
+                  <i class="lni-briefcase"></i>
+
+                </span>
+                <div class="text">
+                  <h4>Full Time Programmer</h4>
+                  <p>Also you could hire me as fulltime job WFO/WFH I really glad to work in anywhere</p>
+                </div>
+              </div>
+              <div class="box-item wow fadeInRight animated" data-wow-delay="0.9s" style="visibility: visible;-webkit-animation-delay: 0.9s; -moz-animation-delay: 0.9s; animation-delay: 0.9s;">
+                <span class="icon">
+                  <i class="lni-rocket"></i>
+
+                </span>
+                <div class="text">
+                  <h4>Programmer Trainer</h4>
+                  <p>I could train a team programmer or being a private tutor for your needs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ======= About Me Section ======= -->
     <section id="about" class="about">
@@ -503,216 +700,11 @@
       </div>
     </section><!-- End About Me Section -->
 
-    <section>
-      <div class="sldjsdj-sdkjsk" >
-
-      </div>
-    </section>
-
-    
-
-    <section id="services" class="section-padding">
-      <div class="container">
-        <div class="section-title">
-          <span>My Services</span>
-          <h2>My Services</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-            <div class="content-left">
-              <div class="box-item wow fadeInLeft animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
-                <span class="icon">
-                  <i class="lni-laptop-phone"></i>
-
-                </span>
-                <div class="text">
-                  <h4>Web Enterprise</h4>
-                  <p>A web application for your internal company to support your bussiness like Accounting, HR, Warehouse,etc.</p>
-                </div>
-              </div>
-              <div class="box-item wow fadeInLeft animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
-                <span class="icon">
-                  <i class="lni-layout"></i>
-
-
-                </span>
-                <div class="text">
-                  <h4>Web Design</h4>
-                  <p>A simple web for your company, personal or portofolio profile with intuitive design</p>
-                </div>
-              </div>
-              <div class="box-item wow fadeInLeft animated" data-wow-delay="0.9s" style="visibility: visible;-webkit-animation-delay: 0.9s; -moz-animation-delay: 0.9s; animation-delay: 0.9s;">
-                <span class="icon">
-                  <i class="lni-mobile"></i>
-                </span>
-                <div class="text">
-                  <h4>Mobile App</h4>
-                  <p>A mobile app for public or private use based on IOS or Android everything to make easy your job</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-            <div class="show-box wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
-              <img src="assets/img/service/intro-mobile.png" class="img-fluid" alt ="img_preview">
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-            <div class="content-right">
-              <div class="box-item wow fadeInRight animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
-                <span class="icon">
-                  <i class="lni-users"></i>
-                </span>
-                <div class="text">
-                  <h4>Freelance Programmer</h4>
-                  <p>I could work as freelance to you for just time period or by project progress</p>
-                </div>
-              </div>
-              <div class="box-item wow fadeInRight animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
-                <span class="icon">
-                  <i class="lni-briefcase"></i>
-
-                </span>
-                <div class="text">
-                  <h4>Full Time Programmer</h4>
-                  <p>Also you could hire me as fulltime job WFO/WFH I really glad to work in anywhere</p>
-                </div>
-              </div>
-              <div class="box-item wow fadeInRight animated" data-wow-delay="0.9s" style="visibility: visible;-webkit-animation-delay: 0.9s; -moz-animation-delay: 0.9s; animation-delay: 0.9s;">
-                <span class="icon">
-                  <i class="lni-rocket"></i>
-
-                </span>
-                <div class="text">
-                  <h4>Programmer Trainer</h4>
-                  <p>I could train a team programmer or being a private tutor for your needs</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ======= Testimonials Section ======= -->
     <!--   -->
     <!-- End Testimonials Section -->
 
-    <!-- ======= My Portfolio Section ======= -->
-    <!-- <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <span>My Portfolio</span>
-          <h2>My Portfolio</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <ul id="portfolio-flters" class="d-flex justify-content-center">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
-        </ul>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End My Portfolio Section -->
+    
 
     <!-- ======= Pricing Section ======= -->
     <!-- <section id="pricing" class="pricing">

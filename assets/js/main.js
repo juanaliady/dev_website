@@ -7,6 +7,54 @@
 var loadTextFloat = false;
 $(document).ready(function () {
 
+  // Calculate age dynamically based on birth date (25 January 2000)
+  function calculateAge() {
+    const birthDate = new Date(2000, 0, 25); // January 25, 2000
+    const today = new Date();
+    
+    let years = today.getFullYear() - birthDate.getFullYear();
+    let months = today.getMonth() - birthDate.getMonth();
+    let days = today.getDate() - birthDate.getDate();
+    
+    // Adjust for negative days
+    if (days < 0) {
+      months--;
+      const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+      days += prevMonth.getDate();
+    }
+    
+    // Adjust for negative months
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+    
+    return { years, months, days };
+  }
+
+  // Update age element on page load
+  const ageElement = document.getElementById('myAge');
+  if (ageElement) {
+    const { years, months, days } = calculateAge();
+    ageElement.textContent = `${years} years , ${months} month , ${days} days`;
+  }
+
+  // Calculate experience dynamically based on professional start (2018)
+  function calculateExperience() {
+    const startYear = 2018;
+    const today = new Date();
+    const yearsOfExperience = today.getFullYear() - startYear;
+    
+    // Add + symbol if more than 1 year
+    return yearsOfExperience > 1 ? `${yearsOfExperience}+ years` : `${yearsOfExperience} year`;
+  }
+
+  // Update experience element on page load
+  const experienceElement = document.getElementById('myExperience');
+  if (experienceElement) {
+    experienceElement.textContent = calculateExperience();
+  }
+
   if (!loadTextFloat) {
 
     setTimeout(function (){ 
