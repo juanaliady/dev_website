@@ -96,10 +96,10 @@ function initProfileStatsAndFloatingText() {
   }
 }
 
-if (window.jQuery) {
-  $(document).ready(initProfileStatsAndFloatingText);
-} else {
+if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initProfileStatsAndFloatingText);
+} else {
+  initProfileStatsAndFloatingText();
 }
 (function() {
   "use strict";
