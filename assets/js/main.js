@@ -5,7 +5,7 @@
 * License: https://bootstrapmade.com/license/
 */
 var loadTextFloat = false;
-$(document).ready(function () {
+function initProfileStatsAndFloatingText() {
 
   // Calculate age dynamically based on birth date (25 January 2000)
   function calculateAge() {
@@ -56,39 +56,51 @@ $(document).ready(function () {
   }
 
   if (!loadTextFloat) {
+    const addFloatingClass = (id, className) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.classList.add(className);
+      }
+    };
 
     setTimeout(function (){ 
-      $('#sql-text').addClass('floating-3');
+      addFloatingClass('sql-text', 'floating-3');
     }, 1800);
 
     setTimeout(function (){
-      $('#sass-text').addClass('floating-4');
+      addFloatingClass('sass-text', 'floating-4');
     }, 100);
 
     setTimeout(function (){
-      $('#html-text').addClass('floating-2');
+      addFloatingClass('html-text', 'floating-2');
     }, 1100);
 
     setTimeout(function (){
-      $('#go-text').addClass('floating-3');
+      addFloatingClass('go-text', 'floating-3');
     }, 200);
 
     setTimeout(function (){
-      $('#c-sharp-text').addClass('floating-4');
+      addFloatingClass('c-sharp-text', 'floating-4');
     }, 1000);
 
     setTimeout(function (){
-      $('#js-text').addClass('floating-1');
+      addFloatingClass('js-text', 'floating-1');
     }, 1500);
 
     setTimeout(function (){
-      $('#php-text').addClass('floating-2');
+      addFloatingClass('php-text', 'floating-2');
     }, 2000);
 
     loadTextFloat = true;
     
   }
-});
+}
+
+if (window.jQuery) {
+  $(document).ready(initProfileStatsAndFloatingText);
+} else {
+  document.addEventListener('DOMContentLoaded', initProfileStatsAndFloatingText);
+}
 (function() {
   "use strict";
 
@@ -247,7 +259,7 @@ $(document).ready(function () {
    * Skills animation
    */
   let skilsContent = select('.skills-content');
-  if (skilsContent) {
+  if (skilsContent && typeof Waypoint !== 'undefined') {
     new Waypoint({
       element: skilsContent,
       offset: '80%',
@@ -261,7 +273,7 @@ $(document).ready(function () {
   }
 
   const typed = select('.typed')
-  if (typed) {
+  if (typed && typeof Typed !== 'undefined') {
     let typed_strings = typed.getAttribute('data-typed-items')
     typed_strings = typed_strings.split('||')
     new Typed('.typed', {
@@ -273,61 +285,63 @@ $(document).ready(function () {
     });
   }
 
-  particlesJS("particles-js", {
-    particles: {
-      number: { value: 9, density: { enable: true, value_area: 800 } },
-      color: { value: "#1b1e34" },
-      shape: {
-        type: "circle",
-        stroke: { width: 0, color: "#000" },
-        polygon: { nb_sides: 4 },
-        image: { src: "./assets/img/atom.png", width: 100, height: 100 }
+  if (select('#particles-js') && typeof particlesJS !== 'undefined') {
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 9, density: { enable: true, value_area: 800 } },
+        color: { value: "#1b1e34" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000" },
+          polygon: { nb_sides: 4 },
+          image: { src: "./assets/img/atom.png", width: 100, height: 100 }
+        },
+        opacity: {
+          value: 0.3,
+          random: true,
+          anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+        },
+        size: {
+          value: 15.08530152163807,
+          random: false,
+          anim: { enable: true, speed: 10, size_min: 40, sync: false }
+        },
+        line_linked: {
+          enable: false,
+          distance: 200,
+          color: "#ffffff",
+          opacity: 1,
+          width: 2
+        },
+        move: {
+          enable: true,
+          speed: 8,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false, rotateX: 600, rotateY: 1200 }
+        }
       },
-      opacity: {
-        value: 0.3,
-        random: true,
-        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false, mode: "grab" },
+          onclick: { enable: false, mode: "push" },
+          resize: true
+        },
+        modes: {
+          grab: { distance: 400, line_linked: { opacity: 1 } },
+          bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+          repulse: { distance: 200, duration: 0.4 },
+          push: { particles_nb: 4 },
+          remove: { particles_nb: 2 }
+        }
       },
-      size: {
-        value: 15.08530152163807,
-        random: false,
-        anim: { enable: true, speed: 10, size_min: 40, sync: false }
-      },
-      line_linked: {
-        enable: false,
-        distance: 200,
-        color: "#ffffff",
-        opacity: 1,
-        width: 2
-      },
-      move: {
-        enable: true,
-        speed: 8,
-        direction: "none",
-        random: false,
-        straight: false,
-        out_mode: "out",
-        bounce: false,
-        attract: { enable: false, rotateX: 600, rotateY: 1200 }
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: { enable: false, mode: "grab" },
-        onclick: { enable: false, mode: "push" },
-        resize: true
-      },
-      modes: {
-        grab: { distance: 400, line_linked: { opacity: 1 } },
-        bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
-        repulse: { distance: 200, duration: 0.4 },
-        push: { particles_nb: 4 },
-        remove: { particles_nb: 2 }
-      }
-    },
-    retina_detect: true
-  });
+      retina_detect: true
+    });
+  }
 
   /**
    *  Platform chart 
@@ -395,37 +409,41 @@ $(document).ready(function () {
       }
   };
 
-  const ctx = $('#myChart');
-  const myChart = new Chart(ctx, {
-    type: myChartData.type,
-    data: myChartData.data,
-    options: myChartData.options,
-  });
+  const ctx = select('#myChart');
+  if (ctx && typeof Chart !== 'undefined') {
+    new Chart(ctx, {
+      type: myChartData.type,
+      data: myChartData.data,
+      options: myChartData.options,
+    });
+  }
   
   /**
    * Testimonials slider
    */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+  if (select('.testimonials-slider') && typeof Swiper !== 'undefined') {
+    new Swiper('.testimonials-slider', {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 15000,
+        disableOnInteraction: false
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.testimonials .swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
+  }
 
   /**
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
+    if (portfolioContainer && typeof Isotope !== 'undefined') {
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item'
       });
@@ -451,25 +469,142 @@ $(document).ready(function () {
   /**
    * Initiate portfolio lightbox 
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
+  if (typeof GLightbox !== 'undefined') {
+    GLightbox({
+      selector: '.portfolio-lightbox'
+    });
+  }
+
+  /**
+   * Portfolio details content
+   */
+  const renderPortfolioDetails = () => {
+    const detailsSection = select('#portfolio-details[data-portfolio-details]');
+    if (!detailsSection) {
+      return Promise.resolve();
+    }
+
+    try {
+      const projects = window.PORTFOLIO_ITEMS || [];
+
+      if (!projects.length) {
+        throw new Error('Portfolio data is not loaded');
+      }
+
+      const params = new URLSearchParams(window.location.search);
+      const requestedId = params.get('id');
+      const project = projects.find(item => item.id === requestedId) || (!requestedId ? projects[0] : null);
+
+      if (!project) {
+        const missingTitle = select('#portfolio-description-title');
+        const missingText = select('#portfolio-description-text');
+
+        if (missingTitle) {
+          missingTitle.textContent = 'Project not found';
+        }
+
+        if (missingText) {
+          missingText.textContent = `No portfolio item exists for id "${requestedId}".`;
+        }
+
+        return Promise.resolve();
+      }
+
+      document.title = `${project.title} - Portfolio Details`;
+
+      const pageTitle = select('#portfolio-page-title');
+      const breadcrumbTitle = select('#portfolio-breadcrumb-title');
+      const descriptionTitle = select('#portfolio-description-title');
+      const descriptionText = select('#portfolio-description-text');
+      const infoList = select('#portfolio-info-list');
+      const sliderWrapper = select('.portfolio-details-slider .swiper-wrapper');
+
+      if (pageTitle) pageTitle.textContent = project.title;
+      if (breadcrumbTitle) breadcrumbTitle.textContent = project.title;
+      if (descriptionTitle) descriptionTitle.textContent = project.summary || project.title;
+      if (descriptionText) descriptionText.innerHTML = project.description || '';
+
+      if (infoList) {
+        const info = [
+          ['Category', project.category],
+          ['Client', project.client],
+          ['Project date', project.projectDate],
+          ['Technology', Array.isArray(project.technologies) ? project.technologies.join(', ') : project.technologies]
+        ];
+
+        infoList.innerHTML = '';
+        info.forEach(([label, value]) => {
+          if (!value) return;
+
+          const item = document.createElement('li');
+          const strong = document.createElement('strong');
+          strong.textContent = label;
+          item.appendChild(strong);
+          item.append(`: ${value}`);
+          infoList.appendChild(item);
+        });
+
+        if (project.projectUrl) {
+          const item = document.createElement('li');
+          const strong = document.createElement('strong');
+          const link = document.createElement('a');
+          strong.textContent = 'Project URL';
+          link.href = project.projectUrl;
+          link.textContent = project.projectUrl.replace(/^https?:\/\//, '');
+          link.target = '_blank';
+          link.rel = 'noopener';
+          item.appendChild(strong);
+          item.append(': ');
+          item.appendChild(link);
+          infoList.appendChild(item);
+        }
+      }
+
+      if (sliderWrapper && Array.isArray(project.images) && project.images.length) {
+        sliderWrapper.innerHTML = '';
+
+        project.images.forEach(image => {
+          const slide = document.createElement('div');
+          const img = document.createElement('img');
+          slide.className = 'swiper-slide';
+          img.src = image;
+          img.alt = project.title;
+          slide.appendChild(img);
+          sliderWrapper.appendChild(slide);
+        });
+      }
+    } catch (error) {
+      console.error(error);
+    }
+
+    return Promise.resolve();
+  };
 
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
+  const initPortfolioDetailsSlider = () => {
+    if (!select('.portfolio-details-slider') || typeof Swiper === 'undefined') {
+      return;
     }
-  });
+
+    const slideCount = select('.portfolio-details-slider .swiper-slide', true).length;
+
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: slideCount > 1,
+      autoplay: slideCount > 1 ? {
+        delay: 7200,
+        disableOnInteraction: false
+      } : false,
+      pagination: {
+        el: '.portfolio-details .swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
+  };
+
+  renderPortfolioDetails().then(initPortfolioDetailsSlider).catch(initPortfolioDetailsSlider);
 
 })()
