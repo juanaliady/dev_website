@@ -1,5 +1,27 @@
 window.PORTFOLIO_ITEMS = [
   {
+    id: "stellow-hr",
+    title: "Stellow HR",
+    category: "Web Application",
+    client: "Stellow",
+    projectDate: "2026",
+    projectUrl: "https://stellow.site",
+    technologies: ["Go", "Vue 3", "PostgreSQL", "Docker", "Nginx", "Tesseract OCR", "OpenAI-compatible LLM API"],
+    summary: "Stellow HR Management",
+    description: "Stellow HR is a recruitment management system handling the full hiring lifecycle: job vacancies, candidate pipeline, assessments, interview scheduling, and offers. Applicants apply through a public careers page while recruiters manage everything from an internal dashboard with match scores and hiring analytics.<br><br>The backend is built in Go with the Gin framework, PostgreSQL, and sqlc for SQL code generation. The frontend consists of two Vue 3 apps built with Vite, Pinia, Vue Router, and Tailwind CSS. AI features include CV summarization and job match scoring via an OpenAI compatible API, with OCR support for scanned documents. Google Calendar integration creates Meet links automatically, and the whole stack runs in Docker Compose behind Nginx with GitHub Actions CI/CD.",
+    cover: "assets/img/portfolio/Stellow-HR/Stellow HR.png",
+    images: [
+      "assets/img/portfolio/Stellow-HR/Stellow HR.png",
+      "assets/img/portfolio/Stellow-HR/stellow.site_dashboard.png",
+      "assets/img/portfolio/Stellow-HR/stellow.site_recruitment_jobs_b05b9fef-1208-453e-ba1e-ec7154820cc7_pipeline (2).png",
+      "assets/img/portfolio/Stellow-HR/stellow.site_recruitment_jobs_b05b9fef-1208-453e-ba1e-ec7154820cc7_pipeline_app=89173ed8-63f6-4f8d-8a8b-c23a070c9013.png",
+      "assets/img/portfolio/Stellow-HR/career.stellow.site_c_acme-corp.png",
+      "assets/img/portfolio/Stellow-HR/career.stellow.site_c_acme-corp_job=d42fa83d-e0a5-48d3-b7d2-8b492141b089.png",
+      "assets/img/portfolio/Stellow-HR/career.stellow.site_c_acme-corp_assessment_seed-fa5384bd-e34d-4301-a609-e7eceeabac71.png"
+
+    ]
+  },
+  {
     id: "shilla-pms-web",
     title: "Shilla PMS Web",
     category: "Web Application",

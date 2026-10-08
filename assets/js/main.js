@@ -349,7 +349,7 @@ if (document.readyState === 'loading') {
   const myChartData = {
       type: 'doughnut',
       data: {
-          labels: [ "Web", "Mobile", "Desktop"],
+          labels: [ "Web", "Mobile", "IoT"],
           datasets: [{
               data: [60,30,10],
               backgroundColor: [
@@ -517,6 +517,7 @@ if (document.readyState === 'loading') {
       const descriptionTitle = select('#portfolio-description-title');
       const descriptionText = select('#portfolio-description-text');
       const infoList = select('#portfolio-info-list');
+      const demoContainer = select('#portfolio-live-demo-container');
       const sliderWrapper = select('.portfolio-details-slider .swiper-wrapper');
 
       if (pageTitle) pageTitle.textContent = project.title;
@@ -539,8 +540,14 @@ if (document.readyState === 'loading') {
           const item = document.createElement('li');
           const strong = document.createElement('strong');
           strong.textContent = label;
+          const span = document.createElement('span');
+          span.textContent = `${value}`;
+          span.setAttribute('style', 'margin-left: 0.5rem;');
+
           item.appendChild(strong);
-          item.append(`: ${value}`);
+          item.append(`:`);
+          item.appendChild(span);
+
           infoList.appendChild(item);
         });
 
@@ -551,12 +558,27 @@ if (document.readyState === 'loading') {
           strong.textContent = 'Project URL';
           link.href = project.projectUrl;
           link.textContent = project.projectUrl.replace(/^https?:\/\//, '');
+          link.style.fontSize = '16px';
+          link.style.fontWeight = '500';
           link.target = '_blank';
           link.rel = 'noopener';
           item.appendChild(strong);
           item.append(': ');
           item.appendChild(link);
           infoList.appendChild(item);
+          link.setAttribute('style', 'margin-left: 0.5rem');
+        }
+      }
+
+      if (demoContainer) {
+        if (project.projectUrl) {
+          demoContainer.innerHTML = `
+            <div class="live-demo-badge" style="position: static; padding: 4px 10px;" title="Live Demo">
+              <span class="blink-dot"></span> Live Demo
+            </div>
+          `;
+        } else {
+          demoContainer.innerHTML = '';
         }
       }
 
@@ -569,6 +591,7 @@ if (document.readyState === 'loading') {
           slide.className = 'swiper-slide';
           img.src = image;
           img.alt = project.title;
+          img.style.borderRadius = '12px';
           slide.appendChild(img);
           sliderWrapper.appendChild(slide);
         });
@@ -591,16 +614,26 @@ if (document.readyState === 'loading') {
     const slideCount = select('.portfolio-details-slider .swiper-slide', true).length;
 
     new Swiper('.portfolio-details-slider', {
-      speed: 400,
+      speed: 600,
       loop: slideCount > 1,
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
       autoplay: slideCount > 1 ? {
-        delay: 7200,
-        disableOnInteraction: false
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
       } : false,
+      keyboard: {
+        enabled: true,
+      },
       pagination: {
         el: '.portfolio-details .swiper-pagination',
         type: 'bullets',
         clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       }
     });
   };
